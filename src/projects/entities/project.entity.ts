@@ -11,7 +11,7 @@ export class Project {
   @Column()
   company: string;
 
-  @Column({ type: 'date' })
+  @Column()
   deadline: string;
 
   @Column({ type: 'float' })

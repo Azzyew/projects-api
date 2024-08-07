@@ -8,13 +8,15 @@ O processo para rodar a api é bem simples!!
 
 Se certifique de que você já tenha instalado o Docker na sua máquina
 
-- Crie um arquivo .env.local baseado no .env.example e preencha-o corretamente
+- Crie um arquivo .env baseado no .env.example e preencha-o corretamente
 
-- Suba um banco de dados no Docker (as credenciais precisam bater com as utilizadas na .env.local)
+- Suba um banco de dados no Docker (as credenciais precisam bater com as utilizadas na .env)
 
 ```bash
 docker run --name NomeDoContainer -e POSTGRES_USER=NomeUser -e POSTGRES_PASSWORD=SenhaAqui -e POSTGRES_DB=NomeDoBanco -p 5432:5432 --restart always -d postgres
 ```
+
+(lembrando que é sempre válido 'psql postgres' e depois um '\du' pra verificar os usuários atuais do postgres e preencher a .env corretamente)
 
 - Instale todas as dependências
 
